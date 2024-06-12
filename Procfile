@@ -1,1 +1,1 @@
-web: gunicorn wexford-wines.wsgi
+web: gunicorn wexford_wines.wsgi
