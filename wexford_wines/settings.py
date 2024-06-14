@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'wines',
 ]
 
@@ -109,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 
 # Internationalization
