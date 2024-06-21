@@ -67,7 +67,13 @@ ROOT_URLCONF = 'wexford_wines.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [TEMPLATES_DIR], #unsure whether i should use this, or the code in docstring below
+        # """
+        # 'DIRS': [
+        #     os.path.join(BASE_DIR, 'templates'),
+        #     os.path.join(BASE_DIR, 'templates', 'allauth'),
+        # ],
+        # """
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
