@@ -48,7 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
-    'wines',
+    'homepage',
+    'wine',
+    'django_rename_app',
 ]
 
 MIDDLEWARE = [
