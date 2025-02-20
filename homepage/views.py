@@ -4,4 +4,4 @@ from django.shortcuts import render
 
 def index(request):
     """ View to return the homepage """
-    return render(request, 'homepage/templates/index.html')
+    return render(request, 'homepage/index.html')
