@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'django_summernote',
     'homepage',
     'wine',
-    'django_rename_app',
 ]
 
 MIDDLEWARE = [
