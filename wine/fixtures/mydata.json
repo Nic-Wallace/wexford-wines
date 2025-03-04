@@ -1,0 +1,342 @@
+[
+    {
+        "model":  "wine.listing",
+        "pk":  "1",
+        "fields": { "name":  "Cabernet Sauvignon",
+        "colour":  "red",
+        "country":  "Australia",
+        "taste_profile":  "Cedar, tobacco, blackberry, soft and fine tannins.",
+        "image":  "red-aus.jpg",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "2",
+        "fields": { "name":  "Ferdinand Mayr \u0027Na Alsdann\u0027 Blaufr�nkisch",
+        "colour":  "red",
+        "country":  "Austria",
+        "taste_profile":  "Mineral tones, blackberries, pepper, smooth tannins.",
+        "image":  "red-aust.jpg",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "3",
+        "fields": { "name":  "Viu Manent Estate Reserva Malbec",
+        "colour":  "red",
+        "country":  "Chile",
+        "taste_profile":  "Blackcurrant, dark cherry, smooth tannins, fresh.",
+        "image":  "red-chile",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "4",
+        "fields": { "name":  "GrandVeneur \u0027les Champauvins\u0027 Cotes-du-Rhone",
+        "colour":  "red",
+        "country":  "France",
+        "taste_profile":  "Deep black fruits, spicy pepper, fresh.",
+        "image":  "red-fra",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "5",
+        "fields": { "name":  "Fritz Wassmer Sp�tburgunder",
+        "colour":  "red",
+        "country":  "Germany",
+        "taste_profile":  "Raspberry, strawberry, dried herbs, fresh and smooth.",
+        "image":  "red-ger",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "6",
+        "fields": { "name":  "Feudo Arancio Nero D\u0027Avola Half Bottle",
+        "colour":  "red",
+        "country":  "Italy",
+        "taste_profile":  "Bold fruit, earthy and spicy, warm smooth tannins.",
+        "image":  "red-ita",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "7",
+        "fields": { "name":  "Akarua Rua Pinot Noir",
+        "colour":  "red",
+        "country":  "New Zealand",
+        "taste_profile":  "Juicy red fruits, savoury, light soft tannins.",
+        "image":  "red-nz",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "8",
+        "fields": { "name":  "Niepoort \u0027Sasta\u0027 Douro",
+        "colour":  "red",
+        "country":  "Portugal",
+        "taste_profile":  "Fresh, fruity, spicy, smooth tannins.",
+        "image":  "red-por",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "9",
+        "fields": { "name":  "Waterford Estate Cabernet Sauvignon",
+        "colour":  "red",
+        "country":  "South Africa",
+        "taste_profile":  "Fruity, earthy, dry tannins.",
+        "image":  "red-sa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "10",
+        "fields": { "name":  "Los Frailes Garnacha Monastrell",
+        "colour":  "red",
+        "country":  "Spain",
+        "taste_profile":  "Red fruit, sour cherry, balsamic, fine tannins.",
+        "image":  "red-spa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "11",
+        "fields": { "name":  "Fog Mountain Merlot",
+        "colour":  "red",
+        "country":  "USA",
+        "taste_profile":  "Cherries, earthiness, structured tannins.",
+        "image":  "red-usa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "18",
+        "fields": { "name":  "La Jara Ros� Prosecco Frizzante",
+        "colour":  "ros�",
+        "country":  "Italy",
+        "taste_profile":  "Gooseberry, redcurrant, fresh and tart.",
+        "image":  "rose-ita",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "25",
+        "fields": { "name":  "Geyerhof \u0027Stockwerk\u0027 Ros�",
+        "colour":  "ros�",
+        "country":  "Austria",
+        "taste_profile":  "Fruity, vibrant, cherries.",
+        "image":  "rose-aust",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "26",
+        "fields": { "name":  "Domaine do Pellehaut Ros�",
+        "colour":  "ros�",
+        "country":  "France",
+        "taste_profile":  "Fruity, fresh, refresing fruit coulis.",
+        "image":  "rose-fra",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "28",
+        "fields": { "name":  "Lustau Vermut Ros�",
+        "colour":  "ros�",
+        "country":  "Spain",
+        "taste_profile":  "Fruity, spiced, herbs, sweet and silky.",
+        "image":  "rose-spa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "24",
+        "fields": { "name":  "Kylie 0% Sparkling Ros�",
+        "colour":  "ros�",
+        "country":  "Australia",
+        "taste_profile":  "Fresh strawberries, complex, dry.",
+        "image":  "rose-aust",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "27",
+        "fields": { "name":  "Leitz \u0027Eins Zwei Zero\u0027 Alcohol-Free Sparkling Ros�",
+        "colour":  "ros�",
+        "country":  "Germany",
+        "taste_profile":  "Cool red fruits, lean minerals.",
+        "image":  "rose-ger",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "19",
+        "fields": { "name":  "Graham Beck Brut Ros�",
+        "colour":  "ros�",
+        "country":  "South Africa",
+        "taste_profile":  "Strawberry, creamy, delicate and complex.",
+        "image":  "rose-sa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "20",
+        "fields": { "name":  "Georges Remy \u0027les Quatre Terroirs\u0027 Champagne",
+        "colour":  "sparkling",
+        "country":  "France",
+        "taste_profile":  "Green apple, zesty citrus, pear, peach, minerals.",
+        "image":  "spark-fra",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "21",
+        "fields": { "name":  "Lusca Irish Sparkling Wine",
+        "colour":  "sparkling",
+        "country":  "Ireland",
+        "taste_profile":  "Red berries, black cherries, fresh baked pastries.",
+        "image":  "spark-ire",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "22",
+        "fields": { "name":  "Graham Beck Brut NV",
+        "colour":  "sparkling",
+        "country":  "South Africa",
+        "taste_profile":  "Yeasty, rich and complex, fresh.",
+        "image":  "spark-sa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "23",
+        "fields": { "name":  "Quinta da Raza P�t-Nat",
+        "colour":  "sparkling",
+        "country":  "Portugal",
+        "taste_profile":  "Orchard fruit, citrus, complex.",
+        "image":  "spark-por",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "29",
+        "fields": { "name":  "Louis Roederer Blanc de Blancs 2016",
+        "colour":  "sparkling",
+        "country":  "France",
+        "taste_profile":  "Lemon zest, green apple, crisp and creamy, hint of almonds.",
+        "image":  "spark-fra",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "12",
+        "fields": { "name":  "Olim Bauda Gavi di Gavi",
+        "colour":  "white",
+        "country":  "Italy",
+        "taste_profile":  "Pure fruits, peach, lime, minerals.",
+        "image":  "white-ita",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "13",
+        "fields": { "name":  "Cloudy Bay Sauvignon Blanc",
+        "colour":  "white",
+        "country":  "New Zealand",
+        "taste_profile":  "Ripe citrus, stone fruit, lemongrass, rich minerals.",
+        "image":  "white-nz",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "14",
+        "fields": { "name":  "Wine \u0026 Soul \u0027Manoella\u0027 Branco",
+        "colour":  "white",
+        "country":  "Portugal",
+        "taste_profile":  "Creamy, fresh, pure and balanced.",
+        "image":  "white-por",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "15",
+        "fields": { "name":  "Crystallum \u0027The Agnes\u0027 Chardonnay",
+        "colour":  "white",
+        "country":  "South Africa",
+        "taste_profile":  "Butterscotch, lemon curd, saline.",
+        "image":  "white-sa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "16",
+        "fields": { "name":  "Merinas Verdejo",
+        "colour":  "white",
+        "country":  "Spain",
+        "taste_profile":  "Wild fennel, clean, refreshing, pithy bitterness.",
+        "image":  "white-spa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "17",
+        "fields": { "name":  "Au Bon Climat Wild Boy Chardonnay",
+        "colour":  "white",
+        "country":  "USA",
+        "taste_profile":  "Pear, peach, citrus.",
+        "image":  "white-usa",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "30",
+        "fields": { "name":  "Henschke \u0027Louis\u0027 Eden Valley Semillon",
+        "colour":  "white",
+        "country":  "Australia",
+        "taste_profile":  "Rich citrus, lemon, butter, stone fruits, fresh.",
+        "image":  "white-aus",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "31",
+        "fields": { "name":  "Domane Wachau Gruner Veltliner",
+        "colour":  "white",
+        "country":  "Austria",
+        "taste_profile":  "Green fruit notes, clear and spicy.",
+        "image":  "white-aust",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "32",
+        "fields": { "name":  "Santa Digna Sauvignon Blanc Half Bottle",
+        "colour":  "white",
+        "country":  "Chile",
+        "taste_profile":  "Tropical fruits, silky, structured.",
+        "image":  "white-chile",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "33",
+        "fields": { "name":  "Raimbault-Pineau Pouilly-Fume",
+        "colour":  "white",
+        "country":  "France",
+        "taste_profile":  "Crisp fruit, firm acidity, minerals.",
+        "image":  "white-fra",
+        "is_public":  "True"
+    }},
+    {
+        "model":  "wine.listing",
+        "pk":  "34",
+        "fields": { "name":  "Von Winning Sauvignon II",
+        "colour":  "white",
+        "country":  "Germany",
+        "taste_profile":  "Green apple, citrus, crisp and fresh.",
+        "image":  "white-ger",
+        "is_public":  "True"
+    }}
+]
