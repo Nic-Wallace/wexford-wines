@@ -25,7 +25,7 @@ class Country(models.Model):
 
 class Listing(models.Model):
     name = models.CharField(max_length=60, null=False, blank=False)
-    colour = models.ForeignKey(Colour, on_delete=models.CASCADE)
+    wine_colour = models.ForeignKey(Colour, on_delete=models.CASCADE)
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
     taste_profile = models.TextField(max_length=1000, null=False, blank=False)
     image = CloudinaryField("image", default="placeholder")
