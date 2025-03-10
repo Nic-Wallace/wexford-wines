@@ -6,13 +6,12 @@ admin.site.register(Listing)
 admin.site.register(Colour)
 admin.site.register(Country)
 
-# implement this after uploading fixtures for colour and country
-
+# do i need to implement this line?
 # @admin.register(Listing)
-# class ListingAdmin(admin.ModelAdmin):
-#     list_display = (
-#         "name", "colour", "country", "taste_profile", "is_public"
-#     )
-#     list_filter = (
-#         "colour__name", "country__name"
-#     )
+class ListingAdmin(admin.ModelAdmin):
+    list_display = (
+        "name", "colour", "country", "taste_profile", "is_public",
+    )
+    list_filter = (
+        "colour__name", "country__name",
+    )
