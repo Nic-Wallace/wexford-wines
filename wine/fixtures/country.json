@@ -1,0 +1,62 @@
+[
+    {
+        "model":  "wine.country",
+        "pk":  "1",
+        "fields": { "name":  "Australia"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "2",
+        "fields": { "name":  "Austria"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "3",
+        "fields": { "name":  "Chile"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "4",
+        "fields": { "name":  "France"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "5",
+        "fields": { "name":  "Germany"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "6",
+        "fields": { "name":  "Ireland"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "7",
+        "fields": { "name":  "Italy"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "8",
+        "fields": { "name":  "New Zealand"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "9",
+        "fields": { "name":  "Portugal"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "10",
+        "fields": { "name":  "South Africa"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "11",
+        "fields": { "name":  "Spain"
+    }},
+    {
+        "model":  "wine.country",
+        "pk":  "12",
+        "fields": { "name":  "USA"
+    }}
+]

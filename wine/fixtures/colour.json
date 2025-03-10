@@ -1,0 +1,26 @@
+[
+    {
+        "model":  "wine.colour",
+        "pk":  "1",
+        "fields": {
+        "name":  "red"
+    }},
+    {
+        "model":  "wine.colour",
+        "pk":  "2",
+        "fields": {
+        "name":  "white"
+    }},
+    {
+        "model":  "wine.colour",
+        "pk":  "3",
+        "fields": {
+        "name":  "rose"
+    }},
+    {
+        "model":  "wine.colour",
+        "pk":  "4",
+        "fields": {
+        "name":  "sparkling"
+    }}
+]
