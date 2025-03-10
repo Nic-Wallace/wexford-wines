@@ -31,3 +31,8 @@ class Listing(models.Model):
     image = CloudinaryField("image", default="placeholder")
     is_public = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ["name"]
+
+    def __str__(self):
+        return self.name
