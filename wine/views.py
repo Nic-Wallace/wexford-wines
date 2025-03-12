@@ -7,7 +7,7 @@ from .models import Listing
 def all_wines(request):
     """ View to return the wine listings """
 
-    wine = Listing.objects.all()
+    wines = Listing.objects.all()
 
     context = {
         'wines': wines,
