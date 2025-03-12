@@ -3,6 +3,7 @@ from .models import Listing
 
 # Create your views here.
 
+
 def all_wines(request):
     """ View to return the wine listings """
 

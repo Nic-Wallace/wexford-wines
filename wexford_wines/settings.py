@@ -29,7 +29,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'wexford-wines.herokuapp.com', 'localhost', 'wexford-wines-e7893e8780a4.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'wexford-wines.herokuapp.com', 'localhost',
+                 'wexford-wines-e7893e8780a4.herokuapp.com']
 
 
 # Application definition
@@ -68,7 +69,8 @@ ROOT_URLCONF = 'wexford_wines.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR], #unsure whether i should use this, or the code in docstring below
+        'DIRS': [TEMPLATES_DIR],
+        # unsure whether i should use this, or the code in docstring below
         # """
         # 'DIRS': [
         #     os.path.join(BASE_DIR, 'templates'),
@@ -79,7 +81,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
