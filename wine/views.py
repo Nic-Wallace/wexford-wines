@@ -19,7 +19,7 @@ def all_wines(request):
 def wine_listing(request, product_id):
     """ View to return a singular wine listing """
 
-    wine = get_object_or_404(Wine, pk=product_id)
+    wine = get_object_or_404(Listing, pk=product_id)
 
     context = {
         'wine': wine,
