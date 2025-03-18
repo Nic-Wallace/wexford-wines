@@ -11,10 +11,10 @@
                 Colour
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="colour-link">
-                <a href="" class="dropdown-item">Red</a>
-                <a href="" class="dropdown-item">White</a>
-                <a href="" class="dropdown-item">Rosé</a>
-                <a href="" class="dropdown-item">Sparkling</a>
+                <a href="{% url 'wines' %}?colour=red" class="dropdown-item">Red</a>
+                <a href="{% url 'wines' %}?colour=white" class="dropdown-item">White</a>
+                <a href="{% url 'wines' %}?colour=rose" class="dropdown-item">Rosé</a>
+                <a href="{% url 'wines' %}?colour=sparkling" class="dropdown-item">Sparkling</a>
             </div>
         </li>
 
