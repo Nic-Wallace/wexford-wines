@@ -80,6 +80,20 @@ body {
     z-index: -1;
 }
 
+.card {
+    height: 20vh;
+}
+
+.card img {
+    height: 20vh;
+    width: 100%;
+    object-fit: contain;
+}
+
+td img {
+    max-height: 20vh;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
