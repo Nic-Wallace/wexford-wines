@@ -16,7 +16,7 @@
         "model": "wine.listing",
         "pk": "2",
         "fields": {
-            "name": "Ferdinand Mayr \u0027Na Alsdann\u0027 Blaufr�nkisch",
+            "name": "Ferdinand Mayr 'Na Alsdann' Blaufränkisch",
             "wine_colour": "1",
             "country": "2",
             "taste_profile": "Mineral tones, blackberries, pepper, smooth tannins.",
@@ -42,7 +42,7 @@
         "model": "wine.listing",
         "pk": "4",
         "fields": {
-            "name": "GrandVeneur \u0027les Champauvins\u0027 Cotes-du-Rhone",
+            "name": "GrandVeneur 'les Champauvins' Cotes-du-Rhone",
             "wine_colour": "1",
             "country": "4",
             "taste_profile": "Deep black fruits, spicy pepper, fresh.",
@@ -55,7 +55,7 @@
         "model": "wine.listing",
         "pk": "5",
         "fields": {
-            "name": "Fritz Wassmer Sp�tburgunder",
+            "name": "Fritz Wassmer Spätburgunder",
             "wine_colour": "1",
             "country": "5",
             "taste_profile": "Raspberry, strawberry, dried herbs, fresh and smooth.",
@@ -68,7 +68,7 @@
         "model": "wine.listing",
         "pk": "6",
         "fields": {
-            "name": "Feudo Arancio Nero D\u0027Avola Half Bottle",
+            "name": "Feudo Arancio Nero D'Avola Half Bottle",
             "wine_colour": "1",
             "country": "7",
             "taste_profile": "Bold fruit, earthy and spicy, warm smooth tannins.",
@@ -94,7 +94,7 @@
         "model": "wine.listing",
         "pk": "8",
         "fields": {
-            "name": "Niepoort \u0027Sasta\u0027 Douro",
+            "name": "Niepoort 'Sasta' Douro",
             "wine_colour": "1",
             "country": "9",
             "taste_profile": "Fresh, fruity, spicy, smooth tannins.",
@@ -146,7 +146,7 @@
         "model": "wine.listing",
         "pk": "18",
         "fields": {
-            "name": "La Jara Ros� Prosecco Frizzante",
+            "name": "La Jara Rosé Prosecco Frizzante",
             "wine_colour": "3",
             "country": "7",
             "taste_profile": "Gooseberry, redcurrant, fresh and tart.",
@@ -159,7 +159,7 @@
         "model": "wine.listing",
         "pk": "25",
         "fields": {
-            "name": "Geyerhof \u0027Stockwerk\u0027 Ros�",
+            "name": "Geyerhof 'Stockwerk' Rosé",
             "wine_colour": "3",
             "country": "2",
             "taste_profile": "Fruity, vibrant, cherries.",
@@ -172,7 +172,7 @@
         "model": "wine.listing",
         "pk": "26",
         "fields": {
-            "name": "Domaine do Pellehaut Ros�",
+            "name": "Domaine do Pellehaut Rosé",
             "wine_colour": "3",
             "country": "4",
             "taste_profile": "Fruity, fresh, refresing fruit coulis.",
@@ -185,7 +185,7 @@
         "model": "wine.listing",
         "pk": "28",
         "fields": {
-            "name": "Lustau Vermut Ros�",
+            "name": "Lustau Vermut Rosé",
             "wine_colour": "3",
             "country": "11",
             "taste_profile": "Fruity, spiced, herbs, sweet and silky.",
@@ -198,7 +198,7 @@
         "model": "wine.listing",
         "pk": "24",
         "fields": {
-            "name": "Kylie 0% Sparkling Ros�",
+            "name": "Kylie 0% Sparkling Rosé",
             "wine_colour": "3",
             "country": "1",
             "taste_profile": "Fresh strawberries, complex, dry.",
@@ -211,7 +211,7 @@
         "model": "wine.listing",
         "pk": "27",
         "fields": {
-            "name": "Leitz \u0027Eins Zwei Zero\u0027 Alcohol-Free Sparkling Ros�",
+            "name": "Leitz 'Eins Zwei Zero' Alcohol-Free Sparkling Rosé",
             "wine_colour": "3",
             "country": "5",
             "taste_profile": "Cool red fruits, lean minerals.",
@@ -224,7 +224,7 @@
         "model": "wine.listing",
         "pk": "19",
         "fields": {
-            "name": "Graham Beck Brut Ros�",
+            "name": "Graham Beck Brut Rosé",
             "wine_colour": "3",
             "country": "10",
             "taste_profile": "Strawberry, creamy, delicate and complex.",
@@ -237,7 +237,7 @@
         "model": "wine.listing",
         "pk": "20",
         "fields": {
-            "name": "Georges Remy \u0027les Quatre Terroirs\u0027 Champagne",
+            "name": "Georges Remy 'les Quatre Terroirs' Champagne",
             "wine_colour": "4",
             "country": "4",
             "taste_profile": "Green apple, zesty citrus, pear, peach, minerals.",
@@ -276,7 +276,7 @@
         "model": "wine.listing",
         "pk": "23",
         "fields": {
-            "name": "Quinta da Raza P�t-Nat",
+            "name": "Quinta da Raza Pét-Nat",
             "wine_colour": "4",
             "country": "9",
             "taste_profile": "Orchard fruit, citrus, complex.",
@@ -328,7 +328,7 @@
         "model": "wine.listing",
         "pk": "14",
         "fields": {
-            "name": "Wine \u0026 Soul \u0027Manoella\u0027 Branco",
+            "name": "Wine & Soul 'Manoella' Branco",
             "wine_colour": "2",
             "country": "9",
             "taste_profile": "Creamy, fresh, pure and balanced.",
@@ -341,7 +341,7 @@
         "model": "wine.listing",
         "pk": "15",
         "fields": {
-            "name": "Crystallum \u0027The Agnes\u0027 Chardonnay",
+            "name": "Crystallum 'The Agnes' Chardonnay",
             "wine_colour": "2",
             "country": "10",
             "taste_profile": "Butterscotch, lemon curd, saline.",
@@ -380,7 +380,7 @@
         "model": "wine.listing",
         "pk": "30",
         "fields": {
-            "name": "Henschke \u0027Louis\u0027 Eden Valley Semillon",
+            "name": "Henschke 'Louis' Eden Valley Semillon",
             "wine_colour": "2",
             "country": "1",
             "taste_profile": "Rich citrus, lemon, butter, stone fruits, fresh.",

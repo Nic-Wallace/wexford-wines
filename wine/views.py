@@ -33,7 +33,19 @@ def all_wines(request):
                 messages.error(request, "Please enter search term")
                 return redirect(reverse('wines'))
             
-            queries = Q(name__icontains=query)
+            if query.lower() in ("rose", "rosé"):
+                # Search for both "rose" and "rosé" in multiple fields
+                queries = (
+                    Q(name__icontains="rose") | Q(name__icontains="rosé") |
+                    Q(wine_colour__name__icontains="rose") | Q(wine_colour__name__icontains="rosé") |
+                    Q(country__name__icontains="rose") | Q(country__name__icontains="rosé")
+                )
+            else:
+                queries = (
+                    Q(name__icontains=query) |
+                    Q(wine_colour__name__icontains=query) |
+                    Q(country__name__icontains=query)
+                )
             wines = wines.filter(queries)
 
     context = {
