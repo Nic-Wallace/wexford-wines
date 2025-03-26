@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
     <d class="header-container container">
@@ -45,20 +46,22 @@
                                 <p class="my-0">€{{ item.wine.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <p class="my-0">{{ item.quantity }}</p>
+                                <p class="my-0">
+                                    <input class="form-control" type="number" name="quantity" id="id_qty_{{ item.wine.id }}" value="{{ item.quantity }}" min="1" max="99">
+                                </p>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">€{{ item.wine.price }}</p>
+                                <p class="my-0">€{{ item.wine.price|calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
                     {% endfor %}
                     <tr>
-                        <td colspan="5" class="pt-5 text-right">
+                        <td colspan="5" class="pt-5 text-end">
                             <h6><strong>Cart Total: €{{ total|floatformat:2 }}</strong></h6>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="5" class="text-right">
+                        <td colspan="5" class="text-end">
                             <a href="{% url 'wines' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
@@ -90,8 +93,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-<!-- {{ block.super }}
-<script type="text/javascript">
+{{ block.super }}
+<!-- <script type="text/javascript">
     
     // Update quantity on click
     $('.update-link').click(function(e) {
