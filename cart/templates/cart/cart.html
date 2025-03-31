@@ -3,11 +3,11 @@
 {% load cart_tools %}
 
 {% block page_header %}
-    <d class="header-container container">
+    <div class="header-container container">
         <div class="row">
             <div class="col"></div>
         </div>
-    </d>
+    </div>
 {% endblock %}
 
 {% block content %}
@@ -119,7 +119,7 @@
 </div>
 {% endblock %}
 
-{% block custom_js %}
+{% block extra_js %}
     {{ block.super }}
     {% include "wine/includes/quantity_script.html" %}
 
