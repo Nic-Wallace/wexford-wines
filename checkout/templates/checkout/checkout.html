@@ -67,7 +67,7 @@
         </div>
         <div class="col-12 col-lg-6">
             <p>Enter your details to complete your order:</p>
-            <form action="{% url 'checkout' %}" method="POST" id="order-form">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Buyer details</legend>
@@ -130,6 +130,6 @@
 {% block postloadjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ id_client_secret|json_script:"id_client_secret" }}
+    {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
