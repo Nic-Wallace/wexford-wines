@@ -41,7 +41,8 @@ def checkout(request):
                     order_line_item.save()
                 except Listing.DoesNotExist:
                     messages.error(request, (
-                        "One of the wines you have selected is no longer available. "
+                        "One of the wines you have selected is no longer \
+                        available. "
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -58,7 +59,7 @@ def checkout(request):
         if not cart:
             messages.error(request, "No wines in the cart")
             return redirect(reverse('wines'))
-        
+
         current_cart = cart_contents(request)
         total = current_cart['total']
         stripe_total = round(total * 100)
@@ -71,18 +72,18 @@ def checkout(request):
 
         order_form = OrderForm()
 
-    if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        if not stripe_public_key:
+            messages.warning(request, 'Stripe public key is missing. \
+                Did you forget to set it in your environment?')
 
-    template = 'checkout/checkout.html'
-    context = {
-        'order_form': order_form,
-        'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret
-    }
+        template = 'checkout/checkout.html'
+        context = {
+            'order_form': order_form,
+            'stripe_public_key': stripe_public_key,
+            'client_secret': intent.client_secret
+        }
 
-    return render(request, template, context)
+        return render(request, template, context)
 
 
 def checkout_success(request, order_number):
@@ -91,7 +92,7 @@ def checkout_success(request, order_number):
     messages.success(request, f'Successfully placed your order! \
         Your order number is {order_number}. Confirmation email will \
         be sent to {order.email}.')
-    
+
     if 'cart' in request.session:
         del request.session['cart']
 
