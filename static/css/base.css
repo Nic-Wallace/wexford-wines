@@ -126,6 +126,16 @@ a.category-badge > span.badge:hover,
     color: rgba(var(--white), 1) !important;
 }
 
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
 
 /* -------------------------------- Media Queries */
 
