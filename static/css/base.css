@@ -137,6 +137,12 @@ a.category-badge > span.badge:hover,
     overflow: visible;
 }
 
+.cart-if-wines {
+    height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

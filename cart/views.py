@@ -30,6 +30,7 @@ def add_to_cart(request, item_id):
 def adjust_cart(request, item_id):
     """ Adjust the quantity of a wine """
 
+    wine = Listing.objects.get(pk=item_id)
     quantity = int(request.POST.get("quantity"))
     cart = request.session.get("cart", {})
 

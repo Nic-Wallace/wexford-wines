@@ -32,7 +32,7 @@ def all_wines(request):
             if not query:
                 messages.error(request, "Please enter search term")
                 return redirect(reverse('wines'))
-            
+
             if query.lower() in ("rose", "rosé"):
                 # Search for both "rose" and "rosé" in multiple fields
                 queries = (
