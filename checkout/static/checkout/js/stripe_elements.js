@@ -45,49 +45,64 @@ form.addEventListener('submit', function(ev) {
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#processing-overlay').fadeToggle(100);
-    stripe.confirmCardPayment(client_secret, {
-        payment_method: {
-            card: card,
-            billing_details: {
-                name: $.trim(form.full_name.value),
-                email: $.trim(form.email.value),
-                phone: $.trim(form.phone_number.value),
-                address:{
-                    country: $.trim(form.country.value),
-                    line1: $.trim(form.street_address1.value),
-                    line2: $.trim(form.street_address2.value),
-                    county: $.trim(form.county.value),
-                }
-        }
-    },
-    shipping_details: {
-        name: $.trim(form.full_name.value),
-        phone: $.trim(form.phone_number.value),
-        address:{
-            country: $.trim(form.country.value),
-            postcode: $.trim(form.postcode.value),
-            line1: $.trim(form.street_address1.value),
-            line2: $.trim(form.street_address2.value),
-            county: $.trim(form.county.value),
-        }
-    },
-}).then(function(result) {
-        if (result.error) {
-            var errorDiv = document.getElementById('card-errors');
-            var html = `
-                <span class="icon" role="alert">
-                <i class="fas fa-times"></i>
-                </span>
-                <span>${result.error.message}</span>`;
-            $(errorDiv).html(html);
-            $('#payment-form').fadeToggle(100);
-            $('#processing-overlay').fadeToggle(100);
-            card.update({ 'disabled': false});
-            $('#submit-button').attr('disabled', false);
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    var csrfToken = $('input[name="csrfmiddleweartoken"]').val();
+    var postData = {
+        'csrfmiddleweartoken': csrfToken,
+        'client_secret': client_secret,
+        'save_info': saveInfo,
+    };
+    var url = '/checkout/cache_checkout_data/';
+
+    $.post(url, postData).done(function() {
+        stripe.confirmCardPayment(client_secret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: $.trim(form.full_name.value),
+                    email: $.trim(form.email.value),
+                    phone: $.trim(form.phone_number.value),
+                    address:{
+                        country: $.trim(form.country.value),
+                        line1: $.trim(form.street_address1.value),
+                        line2: $.trim(form.street_address2.value),
+                        county: $.trim(form.county.value),
+                    }
             }
-        }
-    });
+        },
+        shipping_details: {
+            name: $.trim(form.full_name.value),
+            phone: $.trim(form.phone_number.value),
+            address:{
+                country: $.trim(form.country.value),
+                postcode: $.trim(form.postcode.value),
+                line1: $.trim(form.street_address1.value),
+                line2: $.trim(form.street_address2.value),
+                county: $.trim(form.county.value),
+            }
+        },
+        }).then(function(result) {
+            if (result.error) {
+                var errorDiv = document.getElementById('card-errors');
+                var html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+                $(errorDiv).html(html);
+                $('#payment-form').fadeToggle(100);
+                $('#processing-overlay').fadeToggle(100);
+                card.update({ 'disabled': false});
+                $('#submit-button').attr('disabled', false);
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
+            }
+        });
+    }).fail(function () {
+        location.reload();
+    })
+
 });
