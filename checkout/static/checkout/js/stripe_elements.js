@@ -47,9 +47,9 @@ form.addEventListener('submit', function(ev) {
     $('#processing-overlay').fadeToggle(100);
 
     var saveInfo = Boolean($('#id-save-info').attr('checked'));
-    var csrfToken = $('input[name="csrfmiddleweartoken"]').val();
+    var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
-        'csrfmiddleweartoken': csrfToken,
+        'csrfmiddlewaretoken': csrfToken,
         'client_secret': client_secret,
         'save_info': saveInfo,
     };
@@ -67,19 +67,19 @@ form.addEventListener('submit', function(ev) {
                         country: $.trim(form.country.value),
                         line1: $.trim(form.street_address1.value),
                         line2: $.trim(form.street_address2.value),
-                        county: $.trim(form.county.value),
+                        state: $.trim(form.county.value),
                     }
             }
         },
-        shipping_details: {
+        shipping: {
             name: $.trim(form.full_name.value),
             phone: $.trim(form.phone_number.value),
             address:{
                 country: $.trim(form.country.value),
-                postcode: $.trim(form.postcode.value),
+                postal_code: $.trim(form.postcode.value),
                 line1: $.trim(form.street_address1.value),
                 line2: $.trim(form.street_address2.value),
-                county: $.trim(form.county.value),
+                state: $.trim(form.county.value),
             }
         },
         }).then(function(result) {
