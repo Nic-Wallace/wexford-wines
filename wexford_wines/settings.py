@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
@@ -76,13 +77,12 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
+        # 'DIRS': [TEMPLATES_DIR],
         # unsure whether i should use this, or the code in docstring below
-        # """
-        # 'DIRS': [
-        #     os.path.join(BASE_DIR, 'templates'),
-        #     os.path.join(BASE_DIR, 'templates', 'allauth'),
-        # ],
         # """
         'APP_DIRS': True,
         'OPTIONS': {
