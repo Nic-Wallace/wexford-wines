@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, \
+                            HttpResponse, get_object_or_404
 from django.contrib import messages
 from wine.models import Listing
 
@@ -36,11 +37,6 @@ def adjust_cart(request, item_id):
 
     if quantity > 0:
         cart[item_id] = quantity
-    else:
-        cart.pop(item_id)
-
-    if quantity > 0:
-        cart[item_id] = quantity
         messages.success(request, f'Updated quantity of {wine.name} in cart')
     else:
         cart.pop(item_id)
@@ -50,33 +46,15 @@ def adjust_cart(request, item_id):
     return redirect(reverse("cart_view"))
 
 
-# def remove_from_cart(request, item_id):
-#     """ Remove the item from the shopping cart """
-
-#     cart = request.session.get("cart", {})
-#     cart.pop(item_id)
-
-#     request.session["cart"] = cart
-#     return HttpResponse(status=200)
-
-
 def remove_from_cart(request, item_id):
-    """Remove a wine from the shopping cart"""
+    """ Remove the wine from the shopping cart """
 
     wine = get_object_or_404(Listing, pk=item_id)
-    try:
-        size = None
-        if 'wine_size' in request.POST:
-            size = request.POST['wine_size']
-        cart = request.session.get('cart', {})
+    cart = request.session.get("cart", {})
 
-        if size:
-            del cart[item_id]["items_by_size"][size]
-            if not cart[item_id]["items_by_size"]:
-                cart.pop(item_id)
-        else:
-            cart.pop(item_id)
-            messages.success(request, f'Removed {wine.name} from cart')
+    try:
+        cart.pop(item_id)
+        messages.success(request, f'Removed {wine.name} from cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)

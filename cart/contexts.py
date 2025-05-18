@@ -1,6 +1,7 @@
 from django.shortcuts import get_object_or_404
 from wine.models import Listing
 
+
 def cart_contents(request):
 
     cart_items = []
