@@ -126,6 +126,11 @@ a.category-badge > span.badge:hover,
     color: rgba(var(--white), 1) !important;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* --------------------------- styling for toasts */
 .message-container {
     position: fixed;
     top: 72px;
@@ -143,7 +148,42 @@ a.category-badge > span.badge:hover,
     overflow-x: hidden;
 }
 
-/* -------------------------------- Media Queries */
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+}
+
+.allauth-form-inner-content .form-control {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+/* -------------------------------- media queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
