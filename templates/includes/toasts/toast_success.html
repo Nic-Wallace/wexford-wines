@@ -6,7 +6,7 @@
 		</div>
 		<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
-    {% if total %}
+    {% if total and not on_profile_page %}
 		<hr>
 		<div class=" align-items-center mx-4">
 			<p class="logo-font">Your Cart</p>
