@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
@@ -123,6 +125,24 @@ def checkout(request):
         return render(request, template, context)
 
 
+def _send_confirmation_email(self, order):
+    """Send the user a confirmation email"""
+    cust_email = order.email
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
+
+
 def checkout_success(request, order_number):
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -151,6 +171,48 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation email will \
         be sent to {order.email}.')
 
+    if cache_checkout_data:
+        _send_confirmation_email
+        return HttpResponse(status=200)
+    else:
+        order = None
+        try:
+            order = Order.objects.create(
+                full_name=shipping_details.name,
+                user_profile=profile,
+                email=billing_details.email,
+                phone_number=shipping_details.phone,
+                country=shipping_details.address.country,
+                postcode=shipping_details.address.postal_code,
+                street_address1=shipping_details.address.line1,
+                street_address2=shipping_details.address.line2,
+                county=shipping_details.address.state,
+                grand_total=grand_total,
+                original_cart=cart,
+                stripe_pid=pid,
+            )
+            for item_id, item_data in json.loads(cart).items():
+                product = Listing.objects.get(id=item_id)
+                if isinstance(item_data, int):
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
+                else:
+                    for size, quantity in item_data['items_by_size'].items():
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=quantity,
+                            product_size=size,
+                        )
+                        order_line_item.save()
+        except Exception as e:
+            if order:
+                order.delete()
+            return HttpResponse(f'ERROR: {e}', status=500)
     if 'cart' in request.session:
         del request.session['cart']
 
