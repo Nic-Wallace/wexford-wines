@@ -94,6 +94,10 @@ td img {
     max-height: 20vh;
 }
 
+.image-container {
+    max-width: 10vh;
+    margin: auto;
+}
 
 a.category-badge > span.badge:hover,
 .btt-button:hover {
