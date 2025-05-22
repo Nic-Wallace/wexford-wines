@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3 mb-1">
-            <h2 class="logo-font">Wines</h2>
+            <h2 class="logo-font wine-heading">Wines</h2>
             <hr class="w-80 mb-2 mx-5">
         </div>
     </div>
@@ -39,9 +39,11 @@
                 </div>
             </div>
         {% empty %}
-            <div class="col">
-                <div class="card h-100">
-                    No wines found
+            <div class="col w-100">
+                <div class="h-100 search-redirect">
+                    <p>
+                        No wines found. Back to <a class="inline-redirect" href="{% url 'wines' %}">all wines</a>?
+                    </p>
                 </div>
             </div>
         {% endfor %}

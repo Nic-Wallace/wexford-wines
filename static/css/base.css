@@ -161,6 +161,20 @@ input[name='q']::placeholder {
     color: #7F2A40;
 }
 
+.wine-heading {
+    background-color: #7F2A40;
+    color: white;
+}
+
+.inline-redirect {
+    color: #7F2A40;
+}
+
+.search-redirect {
+    text-align: center;
+    font-size: large;
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
