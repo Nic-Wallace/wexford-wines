@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <d class="header-container container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </d>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 display-4 logo-font text-black>
+                    FAQs
+                </h1>
+                <div class="my-5">
+                    <div class="accordion" id="accordionfaqs">
+                        {% for faq in faqs %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button bg-danger bg-opacity-50" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ faq.id }}" aria-expanded="true" aria-controls="collapse{{ faq.id }}">
+                                    {{ faq.question }}
+                                </button>
+                                </h2>
+                                <div id="collapse{{ faq.id }}" class="accordion-collapse collapse" data-bs-parent="#accordionfaqs">
+                                    <div class="accordion-body">
+                                        {{ faq.answer }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                                    No FAQs found
+                                </button>
+                                </h2>
+                                <div id="collapse0" class="accordion-collapse collapse" data-bs-parent="#accordionfaqs">
+                                    <div class="accordion-body">
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
