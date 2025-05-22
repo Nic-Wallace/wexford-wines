@@ -157,6 +157,10 @@ input[name='q']::placeholder {
     margin-bottom: .5rem;
 }
 
+.accordion-button:focus, .accordion-button:not(.collapsed) {
+    box-shadow: unset;
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
