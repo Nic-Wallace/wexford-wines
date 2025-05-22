@@ -2,8 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
 from .models import Listing, Colour, Country
-
-# Create your views here.
+from .forms import WineForm
 
 
 def all_wines(request):
@@ -68,3 +67,14 @@ def wine_listing(request, product_id):
     }
 
     return render(request, 'wine/wine_listing.html', context)
+
+
+def add_listing(request):
+    """ Add a listing to the site """
+    form = WineForm()
+    template = 'wine/add_listing.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

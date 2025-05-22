@@ -152,6 +152,10 @@ input[name='q']::placeholder {
     overflow-x: hidden;
 }
 
+.listing-form-input {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
 
 /* Allauth form formatting */
 
