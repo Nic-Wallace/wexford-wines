@@ -87,3 +87,4 @@ source: [Mermaid](https://mermaid.live/edit#pako:eNqNVduO2jAQ_ZXIzywKWQhL3latVqq
 
 
 Wine icons created by iconixar - Flaticon
+Empty icons created by Icon.doit - Flaticon
