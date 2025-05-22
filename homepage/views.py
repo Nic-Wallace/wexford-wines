@@ -1,8 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
-
 
 def index(request):
-    """ View to return the homepage """
-    return render(request, 'homepage/index.html')
+    """
+    View to return the homepage
+    """
+    template = 'homepage/index.html'
+    context = {
+        'on_profile_page': True,
+    }
+    return render(request, template, context)
