@@ -71,7 +71,17 @@ def wine_listing(request, product_id):
 
 def add_listing(request):
     """ Add a listing to the site """
-    form = WineForm()
+    if request.method == 'POST':
+        form = WineForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Added the wine listing!')
+            return redirect(reverse(add_listing))
+        else:
+            messages.error(request, 'Failed to add wine listing. Please check the form is valid.')
+    else:
+        form = WineForm()
+
     template = 'wine/add_listing.html'
     context = {
         'form': form,
