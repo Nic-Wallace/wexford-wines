@@ -28,15 +28,14 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #7F2A40;
     color: white;
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
+.btn-maroon {
+    background: #7F2A40;
     color: white;
-    
 }
 
 .btn-outline-black {
@@ -55,9 +54,9 @@ body {
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-maroon:hover,
+.btn-maroon:active,
+.btn-maroon:focus {
     background: #222;
     color: white;
 }
@@ -159,6 +158,7 @@ input[name='q']::placeholder {
 
 .accordion-button:focus, .accordion-button:not(.collapsed) {
     box-shadow: unset;
+    color: #7F2A40;
 }
 
 /* Allauth form formatting */
@@ -192,7 +192,7 @@ input[name='q']::placeholder {
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
-    background-color: #222;
+    background-color: #7F2A40;
     border-color: #222;
 }
 /* -------------------------------- media queries */
