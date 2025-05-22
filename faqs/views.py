@@ -10,6 +10,6 @@ def faqs(request):
     template = 'faqs/faqs.html'
     context = {
         'faqs': faqs,
-        'on_profile_page': True
+        'on_profile_page': True,
     }
     return render(request, template, context)
