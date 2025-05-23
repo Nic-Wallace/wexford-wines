@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from .models import Listing, Colour, Country
 from .forms import WineForm
@@ -69,8 +70,13 @@ def wine_listing(request, wine_id):
     return render(request, 'wine/wine_listing.html', context)
 
 
+@login_required
 def add_listing(request):
     """ Add a listing to the site """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admin can do that.')
+        return redirect(reverse('homepage'))
+
     if request.method == 'POST':
         form = WineForm(request.POST, request.FILES)
         if form.is_valid():
@@ -90,8 +96,13 @@ def add_listing(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_listing(request, wine_id):
     """ Edit a wine listing """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admin can do that.')
+        return redirect(reverse('homepage'))
+
     wine = get_object_or_404(Listing, pk=wine_id)
     if request.method == 'POST':
         form = WineForm(request.POST, request.FILES, instance=wine)
@@ -114,8 +125,13 @@ def edit_listing(request, wine_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_listing(request, wine_id):
     """ Delete a wine listing """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only site admin can do that.')
+        return redirect(reverse('homepage'))
+
     wine = get_object_or_404(Listing, pk=wine_id)
     wine.delete()
     messages.success(request, 'Wine listing deleted!')
