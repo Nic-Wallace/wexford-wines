@@ -38,6 +38,12 @@
                                 <h5 class="card-title mt-5">{{ wine.name }}</h5>
                                 <p class="card-text text-center"><small class="text-body-secondary">€{{ wine.price }}</small></p>
                             </div>
+                            {% if request.user.is_superuser %}
+                                <small class="ml-3">
+                                    <a href="{% url 'edit_listing' wine.id %}">Edit</a> | 
+                                    <a class="text-danger" href="{% url 'delete_listing' wine.id %}">Delete</a>
+                                </small>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
