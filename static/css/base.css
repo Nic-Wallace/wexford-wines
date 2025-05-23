@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('../images/wine-homepage.jpg') no-repeat center center fixed;
+    background: url('https://res.cloudinary.com/dvrqwce13/image/upload/v1747945440/static/images/wine-homepage.0a8174c3aca5.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
