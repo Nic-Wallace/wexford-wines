@@ -17,7 +17,7 @@
                 <div class="image-container my-5">
                     {% if "placeholder" in wine.image.url %}
                     <a href="#">
-                        <img src="{% static 'images/no-image.png' %}" alt="placeholder" class="card-img-top img-fluid">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="placeholder" class="card-img-top img-fluid">
                     </a>
                     {% else %}
                     <a href="{{ wine.image.url }}" target="_blank">

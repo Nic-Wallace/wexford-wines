@@ -16,7 +16,7 @@
 				<div class="row">
 					<div class="col-3 my-1">
 						{% if "placeholder" in item.wine.image.url %}
-						<img class="img-fluid rounded" src="{% static 'images/no-image.png' %}" alt="{{ wine.name }}">
+						<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
 						{% else %}
 						<a href="{{ item.wine.image.url }}" target="_blank">
 							<img class="img-fluid rounded" src="{{ item.wine.image.url }}" alt="{{ item.wine.name }}">
