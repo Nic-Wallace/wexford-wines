@@ -57,10 +57,10 @@ def all_wines(request):
     return render(request, 'wine/wine.html', context)
 
 
-def wine_listing(request, product_id):
+def wine_listing(request, wine_id):
     """ View to return a singular wine listing """
 
-    wine = get_object_or_404(Listing, pk=product_id)
+    wine = get_object_or_404(Listing, pk=wine_id)
 
     context = {
         'wine': wine,
@@ -74,9 +74,9 @@ def add_listing(request):
     if request.method == 'POST':
         form = WineForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            wine = form.save()
             messages.success(request, 'Added the wine listing!')
-            return redirect(reverse(add_listing))
+            return redirect(reverse('wine_listing', args=[wine.id]))
         else:
             messages.error(request, 'Failed to add wine listing. Please check the form is valid.')
     else:
@@ -88,3 +88,35 @@ def add_listing(request):
     }
 
     return render(request, template, context)
+
+
+def edit_listing(request, wine_id):
+    """ Edit a wine listing """
+    wine = get_object_or_404(Listing, pk=wine_id)
+    if request.method == 'POST':
+        form = WineForm(request.POST, request.FILES, instance=wine)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Updated wine listing!')
+            return redirect(reverse('wine_listing', args=[wine.id]))
+        else:
+            messages.error(request, 'Failed to update listing. Please ensure the form is valid.')
+    else:
+        form = WineForm(instance=wine)
+        messages.info(request, f'You are editing {wine.name}')
+
+    template = 'wine/edit_listing.html'
+    context = {
+        'form': form,
+        'wine': wine,
+    }
+
+    return render(request, template, context)
+
+
+def delete_listing(request, wine_id):
+    """ Delete a wine listing """
+    wine = get_object_or_404(Listing, pk=wine_id)
+    wine.delete()
+    messages.success(request, 'Wine listing deleted!')
+    return redirect(reverse('wines'))
