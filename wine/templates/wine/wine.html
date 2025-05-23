@@ -27,7 +27,7 @@
                         <div class="col-md-4">
                             <a href="{% url 'wine_listing' wine.id %}">
                                 {% if "placeholder" in wine.image.url %}
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="placeholder" class="img-fluid rounded">
+                                <img src="{% static 'images/noimage.png' %}" alt="placeholder" class="img-fluid rounded">
                                 {% else %}
                                 <img src="{{ wine.image.url }}" class="img-fluid rounded-start" alt="{{ wine.name }}">
                                 {% endif %}

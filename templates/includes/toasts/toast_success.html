@@ -1,3 +1,4 @@
+{% load static %}
 <div class="toast custom-toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" autohide="false">
     <div class="d-flex">
 		<div class="toast-body">
@@ -16,7 +17,7 @@
 				<div class="row">
 					<div class="col-3 my-1">
 						{% if "placeholder" in item.wine.image.url %}
-						<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ wine.name }}">
+						<img class="img-fluid rounded" src="{% static 'images/noimage.png' %}" alt="{{ item.wine.name }}">
 						{% else %}
 						<a href="{{ item.wine.image.url }}" target="_blank">
 							<img class="img-fluid rounded" src="{{ item.wine.image.url }}" alt="{{ item.wine.name }}">
