@@ -29,7 +29,6 @@ class Listing(models.Model):
     taste_profile = models.TextField(max_length=1000, null=False, blank=False)
     image = CloudinaryField("image", default="placeholder")
     price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
-    is_public = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["name"]

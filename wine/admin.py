@@ -8,7 +8,7 @@ admin.site.register(Country)
 @admin.register(Listing)
 class ListingAdmin(admin.ModelAdmin):
     list_display = (
-        "name", "wine_colour", "country", "taste_profile", "is_public",
+        "name", "wine_colour", "country", "taste_profile",
     )
     list_filter = (
         "wine_colour__name", "country__name",
