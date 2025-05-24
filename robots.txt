@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /profile/
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /checkout/
+Disallow: /cart/
+Sitemap: https://wexford-wines-e7893e8780a4.herokuapp.com/sitemap.xml
