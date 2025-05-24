@@ -175,6 +175,13 @@ input[name='q']::placeholder {
     font-size: large;
 }
 
+.directions-div {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    color: #222;
+}
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
