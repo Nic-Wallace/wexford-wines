@@ -1,0 +1,6 @@
+{% load static %}
+{% if "placeholder" in item.wine.image.url %}
+<img class="img-fluid rounded" src="{% static 'images/noimage.png' %}" alt="{{ wine.name }}">
+{% else %}
+<img class="img-fluid rounded" src="{{ item.wine.image.url }}" alt="{{ item.wine.name }}">
+{% endif %}
