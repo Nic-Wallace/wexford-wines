@@ -37,8 +37,8 @@ def all_wines(request):
                 # Search for both "rose" and "rosé" in multiple fields
                 queries = (
                     Q(name__icontains="rose") | Q(name__icontains="rosé") |
-                    Q(wine_colour__name__icontains="rose") | Q(wine_colour__name__icontains="rosé") |
-                    Q(country__name__icontains="rose") | Q(country__name__icontains="rosé")
+                    Q(wine_colour__name__icontains="rose") | Q(wine_colour__name__icontains="rosé") | # noqa
+                    Q(country__name__icontains="rose") | Q(country__name__icontains="rosé") # noqa
                 )
             else:
                 queries = (
@@ -84,7 +84,9 @@ def add_listing(request):
             messages.success(request, 'Added the wine listing!')
             return redirect(reverse('wine_listing', args=[wine.id]))
         else:
-            messages.error(request, 'Failed to add wine listing. Please check the form is valid.')
+            messages.error(
+                request,
+                'Failed to add wine listing. Please check the form is valid.')
     else:
         form = WineForm()
 
@@ -111,7 +113,9 @@ def edit_listing(request, wine_id):
             messages.success(request, 'Updated wine listing!')
             return redirect(reverse('wine_listing', args=[wine.id]))
         else:
-            messages.error(request, 'Failed to update listing. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update listing. Please ensure the form is valid.')
     else:
         form = WineForm(instance=wine)
         messages.info(request, f'You are editing {wine.name}')
