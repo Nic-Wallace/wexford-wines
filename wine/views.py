@@ -37,8 +37,8 @@ def all_wines(request):
                 # Search for both "rose" and "rosé" in multiple fields
                 queries = (
                     Q(name__icontains="rose") | Q(name__icontains="rosé") |
-                    Q(wine_colour__name__icontains="rose") | Q(wine_colour__name__icontains="rosé") | # noqa
-                    Q(country__name__icontains="rose") | Q(country__name__icontains="rosé") # noqa
+                    Q(wine_colour__name__icontains="rose") | Q(wine_colour__name__icontains="rosé") |  # noqa
+                    Q(country__name__icontains="rose") | Q(country__name__icontains="rosé")  # noqa
                 )
             else:
                 queries = (

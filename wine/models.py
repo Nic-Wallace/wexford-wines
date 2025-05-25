@@ -27,7 +27,7 @@ class Listing(models.Model):
     wine_colour = models.ForeignKey(Colour, on_delete=models.CASCADE)
     country = models.ForeignKey(Country, on_delete=models.CASCADE)
     taste_profile = models.TextField(max_length=1000, null=False, blank=False)
-    image = CloudinaryField("image", null=False, blank=False, default="placeholder") # noqa
+    image = CloudinaryField("image", null=False, blank=False, default="placeholder")  # noqa
     price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
 
     class Meta:
