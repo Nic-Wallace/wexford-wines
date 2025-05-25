@@ -301,7 +301,7 @@ source: [Mermaid](https://mermaid.live/edit#pako:eNqNVduO2jAQ_ZXIzywKWQhL3latVqq
 
 ### GitHub Issues
 
-[GitHub Issues](https://www.github.com/Nic-Wallace/wexford-wines/issues) served as an another Agile tool. There, I managed my User Stories and Milestone tasks, and tracked any issues/bugs.
+[GitHub Issues](https://www.github.com/Nic-Wallace/wexford-wines/issues) served as an another Agile tool. There, I managed my User Stories and Milestone tasks.
 
 | Link | Screenshot |
 | --- | --- |
@@ -368,7 +368,7 @@ I've created a mockup Facebook business account using the [Balsamiq template](ht
 
 ### Newsletter Marketing
 
-I added a newsletter sign-up form on my site, to allow users to sign up with their email address to be included in the newsletter send out list which will include discounts, exclusives and more. I outlines how I did this below: 
+I added a newsletter sign-up form on my site, to allow users to sign up with their email address to be included in the newsletter send out list which will include discounts, exclusives and more. I outline how I did this below: 
 
 **Custom Django Model Newsletter**
 
@@ -414,8 +414,7 @@ Deployment steps are as follows, after account setup:
 
 | Key | Value |
 | --- | --- |
-| `AWS_ACCESS_KEY_ID` | user-inserts-own-aws-access-key-id |
-| `AWS_SECRET_ACCESS_KEY` | user-inserts-own-aws-secret-access-key |
+| `CLOUDINARY_URL` | user-inserts-own-cloudinary-url |
 | `DATABASE_URL` | user-inserts-own-postgres-database-url |
 | `DISABLE_COLLECTSTATIC` | 1 (*this is temporary, and can be removed for the final deployment*) |
 | `EMAIL_HOST_PASS` | user-inserts-own-gmail-api-key |
@@ -424,7 +423,7 @@ Deployment steps are as follows, after account setup:
 | `STRIPE_PUBLIC_KEY` | user-inserts-own-stripe-public-key |
 | `STRIPE_SECRET_KEY` | user-inserts-own-stripe-secret-key |
 | `STRIPE_WH_SECRET` | user-inserts-own-stripe-webhook-secret |
-| `USE_AWS` | True |
+| `DEFAULT_FROM_EMAIL` | user-inserts-own-default-email |
 
 Heroku needs some additional files in order to deploy properly.
 
@@ -575,19 +574,18 @@ Sample `env.py` file:
 ```python
 import os
 
-os.environ.setdefault("AWS_ACCESS_KEY_ID", "user-inserts-own-aws-access-key-id")
-os.environ.setdefault("AWS_SECRET_ACCESS_KEY", "user-inserts-own-aws-secret-access-key")
-os.environ.setdefault("DATABASE_URL", "user-inserts-own-postgres-database-url")
-os.environ.setdefault("EMAIL_HOST_PASS", "user-inserts-own-gmail-host-api-key")
-os.environ.setdefault("EMAIL_HOST_USER", "user-inserts-own-gmail-email-address")
-os.environ.setdefault("SECRET_KEY", "any-random-secret-key")
-os.environ.setdefault("STRIPE_PUBLIC_KEY", "user-inserts-own-stripe-public-key")
-os.environ.setdefault("STRIPE_SECRET_KEY", "user-inserts-own-stripe-secret-key")
-os.environ.setdefault("STRIPE_WH_SECRET", "user-inserts-own-stripe-webhook-secret")  # only if using Stripe Webhooks
+os.environ["SECRET_KEY"] = "any-random-secret-key"
+os.environ["DATABASE_URL"] = "user-inserts-own-postgres-database-url"
+os.environ["CLOUDINARY_URL"] = "user-inserts-own-cloudinary-database-url"
+os.environ["STRIPE_PUBLIC_KEY"] = "user-inserts-own-stripe-public-key"
+os.environ["STRIPE_SECRET_KEY"] = "user-inserts-own-stripe-secret-key"
+os.environ["EMAIL_HOST_PASS"] = "user-inserts-own-gmail-host-api-key"
+os.environ["EMAIL_HOST_USER"] = "user-inserts-own-gmail-email-address"
+os.environ["DEFAULT_FROM_EMAIL"] = "user-inserts-own-gmail-email-address"
 
 # local environment only (do not include these in production/deployment!)
+os.environ["DEVELOPMENT"] = "1"
 os.environ.setdefault("DEBUG", "True")
-os.environ.setdefault("DEVELOPMENT", "True")
 ```
 
 Once the project is cloned or forked, in order to run it locally, you'll need to follow these steps:
@@ -656,7 +654,7 @@ There are no remaining major differences between the local version when compared
 
 | Source | Notes |
 | --- | --- |
-| [Flaticon](https://www.flaticon.com/free-icon/grape_4698346?term=grape&page=1&position=73&origin=search&related_id=4698346) | Generating the favicon and image placeholder |
+| [Flaticon](https://www.flaticon.com/free-icon/grape_4698346?term=grape&page=1&position=73&origin=search&related_id=4698346) | Generating the favicon (iconixar) and image placeholder (Icon.doit) |
 | [Mitchell & Son](https://mitchellandson.com) | Images for the wine listings |
 | [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
 | [Freepik](https://www.freepik.com/free-photo/top-view-organinc-grapes-wine_6595541.htm#fromView=search&page=2&position=1&uuid=86e7f38a-5e1f-468a-b5d4-db911b3febb9&query=Wine) | Background wallpaper |
