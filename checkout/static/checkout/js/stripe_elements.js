@@ -1,3 +1,4 @@
+/* global Stripe */
 /* jshint esversion: 11, jquery: true */
 
 var stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
