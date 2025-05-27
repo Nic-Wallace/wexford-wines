@@ -86,9 +86,9 @@ source: [wexford-wines amiresponsive](https://ui.dev/amiresponsive?url=https://w
 
 I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
 
-- `#585858` primary text.
+- `#000000` primary text.
 - `#FFFFFF` primary highlights.
-- `#000000` secondary text.
+- `#585858` secondary text.
 - `#7F2A40` secondary highlights.
 
 ![screenshot](documentation/coolors.png)
@@ -325,7 +325,7 @@ This site is in early stages of development, and while it has functionality for 
 
 The business can soon use the newsletter list to build positive customer relationships by offering them exclusives, discounts, and much more.
 
-Wexford Wines can also use their social media platforms to generate a community of customers and encourage others to join and become loyal customers over time. They curently have a Facebook page (see below).
+Wexford Wines can also use their social media platforms to generate a community of customers and encourage others to join and become loyal customers over time. They curently have a **[Facebook page](#social-media-marketing)** (see below).
 
 ## SEO & Marketing
 
@@ -499,16 +499,6 @@ Once you've created a Stripe account and logged-in, follow these series of steps
 - You'll have two keys here:
     - `STRIPE_PUBLIC_KEY` = Publishable Key (starts with **pk**)
     - `STRIPE_SECRET_KEY` = Secret Key (starts with **sk**)
-
-As a backup, in case users prematurely close the purchase-order page during payment, we can include Stripe Webhooks.
-
-- From your Stripe dashboard, click **Developers**, and select **Webhooks**.
-- From there, click **Add Endpoint**.
-    - `https://wexford-wines-e7893e8780a4.herokuapp.com/checkout/wh/`
-- Click **receive all events**.
-- Click **Add Endpoint** to complete the process.
-- You'll have a new key here:
-    - `STRIPE_WH_SECRET` = Signing Secret (Wehbook) Key (starts with **wh**)
 
 ### Gmail API
 
