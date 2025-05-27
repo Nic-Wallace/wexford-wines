@@ -215,3 +215,31 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a site user | I would like to sign up to a newsletter | so that I can be kept up to date with new wine products and events | ![screenshot](documentation/features/newsletter.png) |
 | As a site user | I would like to view an FAQ page | so that I can get fast answers to any questions I may have | ![screenshot](documentation/features/faqs.png) |
 | As a site user | I would like to find and fill out a contact form with a message | so that I can communicate with the business | ![screenshot](documentation/features/contact.png) |
+
+### Fixed Bugs
+
+I've tracked and managed bugs and issues during the development stages of my project by taking screenshots and saving any relevant sites I used in finding a solution. I kept track of the bugs in my notes app on my PC:
+![screenshot](documentation/bugs/bug-tracking.png)
+
+| Problem | Fix | Link/Screenshot |
+| --- | --- | --- |
+| Fix admin login error after creating userprofiles, missing userprofile | Foud fix for same issue from student on slack | ![screenshot](documentation/bugs/admin-fix.png) |
+| Fix account dropdown visibility on desktop, works on mobile | Add up to date bootstrap 'data-bs-toggle' in place of 'data-toggle' | [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/components/collapse/) |
+| Fix renaming app issue | Used article found on slack to try rename, didnt work, used tutor support, removed the migration file recommended in the article and fixed the view rendering the correct template | [DjangoTricks](https://djangotricks.blogspot.com/2022/10/how-to-rename-a-django-app.html) |
+| Fix commit error | Followed a YouTube video, entered rebase, reworded the commit and saved before pushing | [Change Git Commit Messages Tutorial](https://www.youtube.com/watch?v=gz26pPCK2x4&t=68s) |
+| Fix main nav rosé button, all other colour links work properly to search, except the rosé option | Added if else query using Q in the views to allow both rose and rosé to be searched | ![screenshot](documentation/bugs/filter-fix.png) |
+| Fix ability to search colour and country in serach bar | Fixed model element names in the wine admin file commit | ![screenshot](documentation/bugs/name-fix.png) |
+| Fix controls for items in cart (remove, update quantity, buttons) | Found that it had a JS block name difference, I amended the names. Problem spotted by my mentor | |
+
+
+### Known Issues
+
+
+| Issue | Screenshot |
+| --- | --- |
+| With a known order-number, users can brute-force "checkout_success.html" and see potentially sensitive information. | ![screenshot](documentation/issues/order-history.png) |
+| If a product is in your bag/cart, but then gets deleted from the database, it throws errors from the session storage memory. | ![screenshot](documentation/issues/session-storage.png) |
+
+
+> [!IMPORTANT]
+> There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
