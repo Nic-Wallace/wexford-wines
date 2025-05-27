@@ -239,6 +239,7 @@ I've tracked and managed bugs and issues during the development stages of my pro
 | --- | --- |
 | With a known order-number, users can brute-force "checkout_success.html" and see potentially sensitive information. | ![screenshot](documentation/issues/order-history.png) |
 | If a product is in your bag/cart, but then gets deleted from the database, it throws errors from the session storage memory. | ![screenshot](documentation/issues/session-storage.png) |
+| The minus quantity button on the cart page allow the user to navigate to a negative number, but the action of updating the quantity to this number does not go through. | ![screenshot](documentation/issues/buttons.png) |
 
 
 > [!IMPORTANT]
