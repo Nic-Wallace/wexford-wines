@@ -198,3 +198,20 @@ Defensive programming was manually tested with the below user acceptance testing
 
 
 ## User Story Testing
+
+| Target | Expectation | Outcome | Screenshot |
+| --- | --- | --- | --- |
+| As a site admin | I would like to add new wines | so that I can keep the site up to date with new products | ![screenshot](documentation/features/listing-management.png) |
+| As a site admin | I would like to view and edit wine listings | so that I can keep the site up to date | ![screenshot](documentation/features/update-wine.png) |
+| As a site admin | I would like to delete wine listings | so that I can keep the site up to date with what is available to buy | ![screenshot](documentation/features/delete-wine.png) |
+| As a site admin | I would like to log in and complete authentication | so that I can access the admin tools and keep the site secure | ![screenshot](documentation/features/login.png) |
+| As a site user | I would like to view and add products to cart | so that I can view and later purchase products in one go | ![screenshot](documentation/features/add-to-cart.png) |
+| As a site user | I would like to modify products in my cart | so that I can remove an item or update the amount of each item I want | ![screenshot](documentation/features/view-cart.png) |
+| As a site user | I would like to be informed of any actions I make | so that I know if my action was successful, which could not be completed and why | ![screenshot](documentation/features/user-feedback.png) |
+| As a site user | I would like to view a product and its relevant information | so that I can find out more about the product | ![screenshot](documentation/features/listing-details.png) |
+| As a site user | I would like to view a list of all wines | so that I can know my options and select one to view | ![screenshot](documentation/features/wine-list.png) |
+| As a site user | I would like to login to the site | so that I can have my order history collected in one place to review | ![screenshot](documentation/features/profile-management.png) |
+| As a site user | I would like to login, logout, and delete my account | so that I can have control over my account | ![screenshot](documentation/features/profile-logout.png) |
+| As a site user | I would like to sign up to a newsletter | so that I can be kept up to date with new wine products and events | ![screenshot](documentation/features/newsletter.png) |
+| As a site user | I would like to view an FAQ page | so that I can get fast answers to any questions I may have | ![screenshot](documentation/features/faqs.png) |
+| As a site user | I would like to find and fill out a contact form with a message | so that I can communicate with the business | ![screenshot](documentation/features/contact.png) |
