@@ -126,13 +126,12 @@ Following best practice, I developed wireframes for desktop, tablet and mobile. 
 | Target | Expectation | Outcome |
 | --- | --- | --- |
 | As a site admin | I can add new wines | so that I can keep the site up to date with new products |
-| As a site admin | I can add new products with ease | so that I add and manage product listings easily |
 | As a site admin | I can view and edit wine listings | so that I can keep the site up to date |
 | As a site admin | I can delete wine listings | so that I can keep the site up to date with what is available to buy |
+| As a site admin | I can log in and complete authentication | so that I can access the admin tools and keep the site secure |
 | As a site user | I can view and add products to cart | so that I can view and later purchase products in one go |
 | As a site user | I can modify products in my cart | so that I can remove an item or update the amount of each item I want |
-| As a site admin | I can log in and complete authentication | so that I can access the admin tools and keep the site secure |
-| As a site user | I can be informed of any access restrictions | so that I understand why an action cannot be completed or why I am being redirected and where to |
+| As a site user | I can be informed of any actions I make | so that I know if my action was successful, which could not be completed and why |
 | As a site user | I can view a product and its relevant information | so that I can find out more about the product |
 | As a site user | I can view a list of all wines | so that I can know my options and select one to view |
 | As a site user | I can login to the site | so that I can have my order history collected in one place to review |
